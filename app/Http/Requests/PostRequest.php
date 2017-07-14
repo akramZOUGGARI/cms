@@ -25,7 +25,10 @@ class PostRequest extends FormRequest
     {
         return [
             'title'=>'required',
-             'text'=>'required'       
+            'text'=>'required' ,
+            'video'=>'required',
+            'img'=>'required',
+            'cat'=>'required'      
         ];
     }
 }

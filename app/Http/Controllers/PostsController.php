@@ -38,7 +38,7 @@ class PostsController extends Controller
     public function store(PostRequest $request)
     {
        Posts::create($request->all());
-       return redirect()->route('posts.index')->with('message','post has been adde successfully');
+       return redirect()->route('post.index')->with('message','post has been adde successfully');
     }
 
     /**
