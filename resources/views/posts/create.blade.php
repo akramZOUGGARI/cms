@@ -79,13 +79,24 @@
 
             <div class="content">
                  <div class="panel-body">
-                {!! Form::open(array('route'=>'task.store')) !!}  
+                {!! Form::open(array('route'=>'post.store')) !!}  
                     <div class="form-group">
-                     {!! Form::label('title',Post Title') !!}
-                     {!! Form::textarea('title',null,['class'=>'form-control']) !!}
+                     {!! Form::label('title','Post Title') !!}
+                     {!! Form::text('title',null,['class'=>'form-control']) !!}
+                    </div>
+                    <div class="form-group">
+                     {!! Form::label('title','Post Text') !!}
+                     {!! Form::textarea('text',null,['class'=>'form-control']) !!}
+                    </div>
+                     <div class="form-group">
+                     {!! Form::button('Create',['type'=>'submit','class'=>'btn btn-primary']) !!}
                     </div>
                </div>
-
+               @if ( count( $errors ) > 0 )
+                   @foreach ($errors->all() as $error)                
+                      <div>{{ $error }}</div>
+                  @endforeach
+                @endif         
             </div>
         </div>
     </body>

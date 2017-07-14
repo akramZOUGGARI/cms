@@ -19,6 +19,6 @@
                     </tr>
                 @endforeach
                 </table>  
-                 {{ link_to_route('posts.create','Add new post',null,['class'=>'btn btn-primary'])}}                                 
+                 {{ link_to_route('post.create','Add new post',null,['class'=>'btn btn-primary'])}}                                 
             </div>
 @endsection
